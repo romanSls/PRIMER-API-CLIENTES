@@ -34,3 +34,7 @@ Id: el identificador único del cliente.
 Nombre: el nombre del cliente.
 Edad: la edad del cliente en formato de cadena de texto.
 Correo: la dirección de correo electrónico del cliente.
+
+ARCHIVO PROGRAM.CS
+
+En el archivo `Program.cs` proporcionado, primero se crea una instancia de `WebApplicationBuilder` con `CreateBuilder(args)`, que prepara los servicios y la configuración de la aplicación. Luego, se añaden los servicios necesarios para el funcionamiento de los controladores con `AddControllers()` y las herramientas para explorar la API y generar documentación con Swagger usando `AddEndpointsApiExplorer()` y `AddSwaggerGen()`. Después, se construye la aplicación con `builder.Build()`. Si la aplicación está en un entorno de desarrollo (`IsDevelopment()`), se habilita Swagger para documentar y probar la API con una interfaz visual. Posteriormente, se configura la redirección de HTTP a HTTPS con `UseHttpsRedirection()`, se activa la autorización con `UseAuthorization()`, y se mapean los controladores con `MapControllers()` para que puedan gestionar las solicitudes HTTP. Finalmente, la aplicación comienza a funcionar con `app.Run()`.
